@@ -1,12 +1,12 @@
 # Text2Hive
 __NOTE: This is meant as a learning exercise for me for Scala/sbt/Hadoop APIs.__
 
-Creates a Hive Table and copies the folder to HDFS based on the xml(s) passed via arguments.
+Creates a Hive Table and copies the folder to HDFS based on the xml(s) passed via arguments. Meant to replicate how Hue lets you upload a text file and will create Hive Table. 
 
 Steps to Run -
+
 1. sbt assembly
-2. Pass the command
-    java -jar Text2Hive-assembly-0.1.jar settings.xml
+2. java -jar Text2Hive-assembly-0.1.jar settings.xml
 
 Example XML Config file
 ```xml
@@ -32,4 +32,5 @@ Couple Notes:
  - If tableType is internal then dest (HDFS) is ignored and it instead moves the folder to hive warehouse directory
  - dbTable requires both database and tablename
  - If isHeaders is yes then will assume the file(s) have the header in the first line of the file if not will create its own
- - If Kerberos is required please specify Keytab
+ - If Kerberos is required please specify Keytabi
+ - Files in src folder are all expected to be the same
