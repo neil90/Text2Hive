@@ -3,6 +3,11 @@ __NOTE: This is meant as a learning exercise for me for Scala/sbt/Hadoop APIs.__
 
 Creates a Hive Table and copies the folder to HDFS based on the xml(s) passed via arguments.
 
+Steps to Run -
+1. sbt assembly
+2. Pass the command
+    java -jar Text2Hive-assembly-0.1.jar settings.xml
+
 Example XML Config file
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
